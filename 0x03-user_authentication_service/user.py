@@ -26,4 +26,4 @@ class User(Base):
         """
         String Rep
         """
-        return f"User: id={self.id}
+        return f"User: id={self.id}"
