@@ -21,3 +21,21 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     session_id = Column(String, nullable=True)
     reset_token = Column(String, nullable=True)
+
+    def __init__(self, email, hashed_password, session_id=None, reset_token=None):
+        self.email = email
+        self.hashed_password = hashed_password
+        self.session_id = session_id
+        self.reset_token = reset_token
+
+    def __repr__(self):
+        return (
+            f"<User(id={self.id}, email={self.email}, "
+            f"session_id={self.session_id}, reset_token={self.reset_token})>"
+        )
+
+    def dummy_method(self):
+        pass
+
+    def another_dummy_method(self):
+        pass
